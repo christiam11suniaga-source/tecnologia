@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b18">
+  <title>WWW: una historia interactiva</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-era="2026">
+  <div class="progress-track"><div id="readingProgress"></div></div>
+  <div class="noise"></div>
+  <div id="cursorDot"></div>
+  <header class="topbar">
+    <a class="brand" href="#inicio"><span class="brand-mark">W</span><span>WEB<span class="brand-dim">/ARCHIVE</span></span></a>
+    <nav>
+      <a href="#historia">Historia</a><a href="#chile">Chile</a><a href="#museo">Demostraciones</a><a href="#juegos">Minijuegos</a><a href="#quiz">Desafío</a>
+    </nav>
+    <div class="top-actions">
+      <button id="soundToggle" class="icon-button" aria-label="Activar sonidos" title="Sonidos">♫ <span>OFF</span></button>
+      <button id="themeToggle" class="icon-button" aria-label="Cambiar tema" title="Cambiar tema">◐</button>
+      <button id="menuToggle" class="menu-toggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="inicio">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> ARCHIVO DIGITAL INTERACTIVO · 1989—2026</div>
+        <h1>La web no<br>siempre fue <span class="gradient-text">así.</span></h1>
+        <p class="hero-lead">Antes de los videos, las redes sociales y las páginas llenas de efectos, existía una idea sencilla: conectar información mediante enlaces.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#historia">Explorar la historia <span>↘</span></a>
+          <a class="text-link" href="#chile">Descubrir el caso chileno ↗</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>1989</strong><span>Primera propuesta</span></div>
+          <div><strong>1990</strong><span>Primer sitio web</span></div>
+          <div><strong>1993</strong><span>Primera web chilena</span></div>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="floating-tag tag-a">HTML</div><div class="floating-tag tag-b">HTTP</div><div class="floating-tag tag-c">://</div>
+        <div class="browser-window hero-window">
+          <div class="window-bar"><div class="traffic"><i></i><i></i><i></i></div><span>the-world-wide-web</span><span>•••</span></div>
+          <div class="window-content">
+            <div class="mini-label">INFORMATION SPACE / 001</div>
+            <div class="wire-title">WORLD<br>WIDE WEB</div>
+            <div class="wire-line"></div><p>Information · Hypertext · Links</p>
+            <div class="wire-links"><span>About</span><span>People</span><span>Software</span></div>
+            <div class="wire-footer">A SMALL IDEA. A CONNECTED WORLD.</div>
+          </div>
+        </div>
+        <div class="orbit-caption">DESLIZA PARA VIAJAR EN EL TIEMPO <span>↓</span></div>
+      </div>
+    </section>
+
+    <section class="intro-band section-wrap">
+      <div class="section-kicker">ANTES DE COMENZAR / 01</div>
+      <div class="intro-grid">
+        <h2>Internet y la<br><span class="muted-text">World Wide Web</span><br>no son lo mismo.</h2>
+        <div class="intro-explain">
+          <p><b>Internet</b> es la infraestructura global que conecta redes y dispositivos. La <b>World Wide Web</b> es un servicio que funciona sobre Internet y permite visitar documentos conectados mediante enlaces.</p>
+          <div class="mini-fact"><span class="fact-icon">↗</span><span>Piensa en Internet como las carreteras y en la Web como los sitios a los que puedes llegar usando esas carreteras.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="timeline-section section-wrap" id="historia">
+      <div class="section-heading">
+        <div><div class="section-kicker">02 / VIAJE TEMPORAL</div><h2>Elige una época.<br><span class="muted-text">Mira cómo cambia todo.</span></h2></div>
+        <p>Selecciona un año para transformar el diseño, la interfaz y la historia que estás explorando.</p>
+      </div>
+      <div class="timeline-controls">
+        <button id="prevEra" class="round-button" aria-label="Año anterior">←</button>
+        <div class="year-tabs" id="yearTabs">
+          <button data-year="1989">1989</button><button data-year="1990">1990</button><button data-year="1993">1993</button><button data-year="1996">1996</button><button data-year="2000">2000</button><button data-year="2010">2010</button><button data-year="2020">2020</button><button data-year="2026" class="active">2026</button>
+        </div>
+        <button id="nextEra" class="round-button" aria-label="Año siguiente">→</button>
+      </div>
+      <div class="era-panel" id="eraPanel">
+        <div class="era-copy">
+          <div class="era-meta"><span id="eraNumber">CAPÍTULO 08</span><span id="eraTag">ERA ACTUAL</span></div>
+          <div class="era-year" id="eraYear">2026</div>
+          <h3 id="eraTitle">La web se vuelve inteligente</h3>
+          <p id="eraDescription">La web actual combina servicios en la nube, aplicaciones, video, comercio, redes sociales e inteligencia artificial.</p>
+          <div class="era-detail" id="eraDetail">Las páginas ya no son solo documentos: muchas funcionan como aplicaciones completas.</div>
+          <div class="era-nav"><button id="eraPrevText" class="button button-ghost">← Anterior</button><button id="eraNextText" class="button button-primary">Siguiente época →</button></div>
+        </div>
+        <div class="era-visual-wrap">
+          <div class="visual-label">RECREACIÓN INTERACTIVA <span>● EN VIVO</span></div>
+          <div id="eraVisual" class="era-visual visual-modern">
+            <div class="modern-top"><span>◉ WEBSPACE</span><span>⌕　☰</span></div>
+            <div class="modern-body"><div class="modern-chip">THE DIGITAL AGE</div><h4>Ideas que<br>conectan.</h4><p>Una experiencia para explorar el mundo.</p><div class="modern-pill">EXPLORAR ↗</div></div>
+            <div class="modern-orb"></div>
+          </div>
+          <div class="visual-caption" id="visualCaption">Diseño adaptable, contenido dinámico e interacción.</div>
+        </div>
+      </div>
+      <div class="timeline-note"><span>TIP DE EXPLORACIÓN</span> Prueba todos los años. No solo cambia el texto: también cambia la estética de la recreación.</div>
+    </section>
+
+    <section class="chile-section section-wrap" id="chile">
+      <div class="section-kicker">03 / HISTORIA LOCAL</div>
+      <div class="chile-grid">
+        <div class="chile-copy">
+          <div class="chile-stamp">CHILE · 1993</div>
+          <h2>Chile también<br>se conectó<br><span class="gradient-text">a la historia.</span></h2>
+          <p>En 1993, el Departamento de Ciencias de la Computación de la Universidad de Chile desarrolló la primera página web hecha en el país. El proyecto fue impulsado por el estudiante José Flores, en un curso dirigido por el académico José Miguel Piquer.</p>
+          <p>El sitio buscaba mostrar Chile al mundo. Era una propuesta pionera: cuando se creó, existían apenas unos cientos de sitios web en todo el planeta.</p>
+          <div class="chile-facts">
+            <div><strong>1993</strong><span>Año de creación</span></div>
+            <div><strong>U. de Chile</strong><span>Institución pionera</span></div>
+            <div><strong>José Flores</strong><span>Estudiante creador</span></div>
+          </div>
+          <a class="text-link" href="https://uchile.cl/noticias/149951/el-trabajo-que-dio-origen-a-la-primera-pagina-web-de-latinoamerica" target="_blank" rel="noopener">Leer la historia en Universidad de Chile ↗</a>
+        </div>
+        <div class="chile-demo">
+          <div class="demo-top"><span>◉</span> sunsite.dcc.uchile.cl/chile <span class="demo-status">1993</span></div>
+          <div class="demo-page">
+            <div class="demo-banner">CHILE</div>
+            <div class="demo-links"><a href="#chile">Inicio</a><a href="#chile">Geografía</a><a href="#chile">Información</a><a href="#chile">Clima</a></div>
+            <div class="demo-content">
+              <div><h3>Welcome to Chile</h3><p>Information about Chile for people around the world.</p><p>Explore the geography, cities and culture of this long country in South America.</p><a href="#chile">More information...</a></div>
+              <div class="pixel-map">🇨🇱<small>33° S</small></div>
+            </div>
+            <div class="demo-bottom">A RECREATION INSPIRED BY THE EARLY CHILEAN WEB</div>
+          </div>
+          <p class="demo-caption">Recreación educativa inspirada en el estilo de los primeros sitios. No es una copia exacta del original.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="lab-section section-wrap" id="laboratorio">
+      <div class="section-heading">
+        <div><div class="section-kicker">04 / LABORATORIO WEB</div><h2>Juega con la historia.</h2></div>
+        <p>Pequeños experimentos para entender cómo cambiaron las páginas y la forma de navegar.</p>
+      </div>
+      <div class="lab-grid">
+        <article class="lab-card compare-card">
+          <div class="card-topline"><span>EXPERIMENTO 01</span><span>COMPARADOR</span></div>
+          <h3>1996 vs. 2026</h3><p>Arrastra el control para comparar dos generaciones de diseño web.</p>
+          <div class="compare-stage">
+            <div class="compare-old"><div class="old-site"><h4>MY HOME PAGE</h4><hr><p>WELCOME TO MY PAGE!!!</p><div class="old-links">HOME　ABOUT　LINKS</div><div class="old-box">UNDER CONSTRUCTION<br>🚧 🚧 🚧</div><small>BEST VIEWED AT 800×600</small></div></div>
+            <div class="compare-new"><div class="new-site"><div class="new-nav">NOVA<span>●</span> <small>MENU</small></div><div class="new-content"><span>DESIGN / 2026</span><h4>Make space<br>for ideas.</h4><button>Discover ↗</button></div></div></div>
+            <input id="compareSlider" type="range" min="0" max="100" value="50" aria-label="Comparar diseños">
+            <div class="compare-handle" id="compareHandle">↔</div>
+          </div>
+          <div class="compare-labels"><span>1996 · WEB CLÁSICA</span><span>2026 · WEB MODERNA</span></div>
+        </article>
+        <article class="lab-card map-card">
+          <div class="card-topline"><span>EXPERIMENTO 02</span><span>RED DE HITOS</span></div>
+          <h3>Un mapa de conexiones</h3><p>Pulsa un nodo para descubrir un momento importante.</p>
+          <div class="network-map" id="networkMap">
+            <svg viewBox="0 0 500 280" role="img" aria-label="Mapa de hitos conectados"><path d="M55 135 L150 65 L250 130 L345 55 L445 135 M150 65 L160 220 L250 130 L350 220 L445 135 M55 135 L160 220 M345 55 L350 220" /></svg>
+            <button class="node n1" data-node="1989">1989</button><button class="node n2" data-node="1990">1990</button><button class="node n3" data-node="1993">1993</button><button class="node n4" data-node="1996">1996</button><button class="node n5" data-node="2000">2000</button><button class="node n6" data-node="2010">2010</button><button class="node n7" data-node="2026">2026</button>
+          </div>
+          <div class="node-info" id="nodeInfo"><b>Selecciona un nodo</b><span>La red conecta ideas, tecnologías y momentos históricos.</span></div>
+        </article>
+        <article class="lab-card browser-card">
+          <div class="card-topline"><span>EXPERIMENTO 03</span><span>NAVEGADOR ANTIGUO</span></div>
+          <h3>Explora una mini web de 1993</h3><p>Haz clic en los enlaces de esta recreación para navegar por sus secciones.</p>
+          <div class="retro-browser">
+            <div class="retro-toolbar"><span>◀</span><span>▶</span><span>↻</span><div>http://example.org/</div></div>
+            <div class="retro-screen" id="retroScreen"><h4>THE WORLD WIDE WEB</h4><p>Welcome to this small information space.</p><ul><li><a href="#" data-page="about">What is the Web?</a></li><li><a href="#" data-page="links">Available links</a></li><li><a href="#" data-page="help">Help and information</a></li></ul><p class="retro-small">Select a link to continue.</p></div>
+          </div>
+        </article>
+        <article class="lab-card facts-card">
+          <div class="card-topline"><span>EXPERIMENTO 04</span><span>DATOS RÁPIDOS</span></div>
+          <h3>¿Sabías que...?</h3>
+          <div class="fact-display"><span class="fact-big" id="factNumber">01</span><p id="factText">El primer sitio web del mundo explicaba qué era la propia World Wide Web.</p></div>
+          <button id="nextFact" class="button button-ghost">Otro dato ↗</button>
+        </article>
+      </div>
+    </section>
+
+
+    <section class="museum-section section-wrap" id="museo">
+      <div class="section-heading">
+        <div><div class="section-kicker">05 / MÁQUINA DEL TIEMPO</div><h2>Entra a una web<br><span class="muted-text">de cada generación.</span></h2></div>
+        <p>Estas son demostraciones visuales: cambia de año y observa cómo evolucionaron la estructura, los colores, las imágenes y la navegación.</p>
+      </div>
+      <div class="museum-controls" id="museumControls">
+        <button class="active" data-museum="1993">1993</button><button data-museum="1996">1996</button><button data-museum="2005">2005</button><button data-museum="2015">2015</button><button data-museum="2026">2026</button>
+      </div>
+      <div class="museum-browser">
+        <div class="museum-chrome"><span class="traffic"><i></i><i></i><i></i></span><span id="museumAddress">http://info.example/1993</span><span>▢</span></div>
+        <div id="museumPage" class="museum-page museum-1993">
+          <h3>THE WORLD WIDE WEB</h3><p>Welcome to the information space.</p><hr><ul><li><a href="#museo">What is hypertext?</a></li><li><a href="#museo">How to create a page</a></li><li><a href="#museo">Available information</a></li></ul><small>Text · links · simple documents</small>
+        </div>
+      </div>
+      <div class="museum-caption"><strong id="museumTitle">1993 · La web era principalmente texto</strong><p id="museumDescription">Los sitios se organizaban con títulos, párrafos y enlaces azules subrayados. Las imágenes eran escasas y la navegación era directa.</p></div>
+      <div class="museum-compare"><div><b>ANTES</b><span>Documentos conectados, páginas estáticas y pocos elementos visuales.</span></div><div><b>AHORA</b><span>Aplicaciones interactivas, video, animaciones, diseño adaptable y servicios en tiempo real.</span></div></div>
+    </section>
+
+    <section class="games-section section-wrap" id="juegos">
+      <div class="section-heading"><div><div class="section-kicker">06 / ZONA DE JUEGOS</div><h2>Aprende jugando.</h2></div><p>Dos minijuegos para entender qué cambió y cómo se construía una página web.</p></div>
+      <div class="games-grid">
+        <article class="lab-card game-card">
+          <div class="card-topline"><span>MINIJUEGO 01</span><span>CONSTRUCTOR HTML</span></div><h3>Construye una web de los 90</h3><p>Agrega elementos a la página y mira cómo se arma. En esa época, mucho del diseño se hacía directamente con etiquetas HTML.</p>
+          <div class="builder-tools"><button data-build="title">＋ Título</button><button data-build="paragraph">＋ Texto</button><button data-build="link">＋ Enlace</button><button data-build="image">＋ Imagen</button><button data-build="clear">Limpiar</button></div>
+          <div class="builder-window"><div class="builder-bar">MY FIRST HOMEPAGE · HTML</div><div id="builderCanvas" class="builder-canvas"><p class="builder-empty">Tu página está vacía. ¡Agrega algo!</p></div></div>
+          <div class="game-status" id="builderStatus" aria-live="polite">Elementos añadidos: 0</div>
+        </article>
+        <article class="lab-card game-card">
+          <div class="card-topline"><span>MINIJUEGO 02</span><span>ADIVINA LA ÉPOCA</span></div><h3>¿De qué año es esta web?</h3><p>Observa el diseño y elige la época que mejor encaja. Hay 5 rondas.</p>
+          <div id="guessPreview" class="guess-preview guess-90"><div class="guess-art-title">WELCOME!!!</div><div class="guess-art-links">HOME　 ABOUT　 GUESTBOOK</div><div class="guess-art-box">★ UNDER CONSTRUCTION ★<br>Best viewed at 800 × 600</div></div>
+          <div class="guess-question" id="guessQuestion">¿En qué época encaja este diseño?</div><div class="guess-options" id="guessOptions"><button data-guess="1990s">1990s</button><button data-guess="2000s">2000s</button><button data-guess="2010s">2010s</button><button data-guess="2020s">2020s</button></div>
+          <div class="game-status" id="guessStatus" aria-live="polite">Ronda 1 de 5 · Puntos: 0</div><button class="button button-ghost" id="guessNext" disabled>Siguiente diseño →</button>
+        </article>
+      </div>
+    </section>
+
+
+    <section class="quiz-section section-wrap" id="quiz">
+      <div class="quiz-shell">
+        <div class="quiz-heading"><div class="section-kicker">07 / DESAFÍO FINAL</div><h2>¿Cuánto aprendiste?</h2><p>Responde las cinco preguntas para desbloquear el archivo secreto.</p></div>
+        <div class="quiz-progress"><div id="quizProgress"></div></div>
+        <div id="quizArea">
+          <div class="quiz-meta"><span id="questionCount">PREGUNTA 01 / 05</span><span id="scoreLabel">PUNTOS: 0</span></div>
+          <h3 id="questionText">¿En qué año propuso Tim Berners-Lee la idea de la World Wide Web?</h3>
+          <div class="answers" id="answers"></div>
+          <div class="quiz-feedback" id="quizFeedback" aria-live="polite"></div>
+          <button id="nextQuestion" class="button button-primary" disabled>Siguiente pregunta →</button>
+        </div>
+        <div id="quizResult" class="quiz-result hidden">
+          <div class="result-icon">✦</div><div class="section-kicker">ARCHIVO DESBLOQUEADO</div><h3 id="resultTitle">¡Misión completada!</h3><p id="resultText">Terminaste el recorrido por la historia de la web.</p>
+          <div id="scoreMeme" class="score-meme hidden" aria-live="polite"></div>
+          <div class="secret-lock" id="secretLock"><span>▣</span><b>CONTENIDO CLASIFICADO</b><small>Consigue 5/5 para desbloquear la recompensa definitiva.</small></div>
+          <button id="revealSecret" class="button button-primary">Abrir recompensa secreta ✦</button>
+          <div id="secretReward" class="secret-reward hidden">
+            <div class="rickroll-label">TRANSMISIÓN ESPECIAL / 100% IMPORTANTE</div>
+            <h4>Has sido oficialmente...</h4>
+            <p>Rickrolleado. Nunca confíes en un botón que diga “recompensa secreta”.</p>
+            <div class="video-frame reward-link-card">
+              <div class="reward-play">▶</div>
+              <p>La recompensa se abre directamente en YouTube. No usamos un reproductor incrustado, porque los navegadores suelen bloquearlo cuando la web se abre desde un archivo local.</p>
+              <a class="button button-primary" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">Ver recompensa en YouTube ↗</a>
+            </div>
+            <button id="closeReward" class="button button-ghost">Cerrar transmisión</button>
+          </div>
+          <button id="restartQuiz" class="text-link restart-link">Volver a intentar el desafío ↻</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing section-wrap">
+      <div class="closing-mark">WWW</div><div class="section-kicker">FIN DEL RECORRIDO</div>
+      <h2>De una página<br>de texto a un <span class="gradient-text">universo.</span></h2>
+      <p>La Web cambió la manera de compartir información, aprender, comunicarnos y crear. Y todavía sigue evolucionando.</p>
+      <a class="button button-primary" href="#inicio">Volver al inicio ↑</a>
+    </section>
+  </main>
+
+  <footer class="footer"><span>WEB/ARCHIVE · PROYECTO EDUCATIVO</span><span>HECHO PARA EXPLORAR, NO SOLO LEER.</span><a href="#inicio">VOLVER ARRIBA ↑</a></footer>
+  <script src="main.js"></script>
+</body>
+</html>
